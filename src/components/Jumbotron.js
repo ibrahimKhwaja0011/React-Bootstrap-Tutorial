@@ -25,14 +25,17 @@ const Styles = styled.div`
   }
 `;
 
-export const Jumbotron = () => (
+export default function Jumbotron () 
+{
+  return(
   <Styles>
     <Jumbo fluid className="jumbo">
       <div className="overlay"></div>
       <Container>
         <h1>Welcome</h1>
-        <p>Learn to code from my YouTube videos</p>
+        <p>WebSite is Under</p>
       </Container>
     </Jumbo>
   </Styles>
-)
+);
+}

@@ -1,8 +1,11 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Jumbotron as Jumbo, Container } from 'react-bootstrap';
 
-export const Layout = (props) => (
-  <Container>
-    {props.children}
+export default function Layout  (props)
+{
+   return(
+  <Container fluid className="jumbo">
+   {props.children}
   </Container>
-)
+);
+}

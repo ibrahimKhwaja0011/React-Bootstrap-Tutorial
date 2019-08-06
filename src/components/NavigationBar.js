@@ -5,11 +5,13 @@ import styled from 'styled-components';
 
 const Styles = styled.div`
   .navbar {
-    background-color: #222;
+    background-color: #eebf0e;
   }
 
   a, .navbar-brand, .navbar-nav .nav-link {
-    color: #bbb;
+    color: #000;
+    font-family:Helvetica;
+    font-weight: bold;
 
     &:hover {
       color: white;
@@ -17,21 +19,27 @@ const Styles = styled.div`
   }
 `;
 
-export const NavigationBar = () => (
+export default function NavigationBar () {
+return(
   <Styles>
     <Navbar expand="lg">
-      <Navbar.Brand href="/">Code Life</Navbar.Brand>
+      <Navbar.Brand href="https://bytefuge.com">ByteFuge</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
           <Nav.Item>
             <Nav.Link>
-              <Link to="/">Home</Link>
+              <Link to="/"> ABOUT US </Link>
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
             <Nav.Link>
-              <Link to="/about">About</Link>
+              <Link to="/about"> SERVICES WE PROVIDE</Link>
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link>
+              <Link to="/about"> Technologies We Use </Link>
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
@@ -43,4 +51,5 @@ export const NavigationBar = () => (
       </Navbar.Collapse>
     </Navbar>
   </Styles >
-)
+);
+}
